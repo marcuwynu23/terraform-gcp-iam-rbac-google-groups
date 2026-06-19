@@ -1,0 +1,23 @@
+# ==========================================
+# GCP Project & Region
+# ==========================================
+project_id       = "your-gcp-project-id"
+region            = "us-central1"
+
+# ==========================================
+# Team Permissions (Free Consumer Google Groups → Roles)
+# ==========================================
+team_permissions = {
+  "my-free-devops-team@googlegroups.com" = [
+    "roles/compute.admin",
+    "roles/run.admin",
+    "roles/cloudbuild.admin",
+    "roles/storage.admin"
+  ],
+  "my-free-dev-team@googlegroups.com" = [
+    "roles/compute.viewer",
+    "roles/run.developer",
+    "roles/cloudbuild.editor",
+    "roles/storage.objectUser"
+  ]
+}
