@@ -150,3 +150,31 @@ sequenceDiagram
    ```bash
    terraform apply
    ```
+
+---
+
+## Usage as a Module
+
+Reference this repository as a Terraform module in your own configurations:
+
+```hcl
+module "iam_rbac_groups" {
+  source = "github.com/marcuwynu23/terraform-gcp-iam-rbac-google-groups?ref=main"
+
+  project_id = var.project_id
+  region     = "us-central1"
+
+  team_permissions = {
+    "team-admins@googlegroups.com" = [
+      "roles/compute.admin",
+      "roles/storage.admin"
+    ],
+    "team-developers@googlegroups.com" = [
+      "roles/compute.viewer",
+      "roles/storage.objectViewer"
+    ]
+  }
+}
+```
+
+All [variables](#variables) documented below are available when using this as a module.
