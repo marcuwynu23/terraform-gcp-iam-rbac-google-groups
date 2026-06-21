@@ -151,8 +151,6 @@ sequenceDiagram
    terraform apply
    ```
 
----
-
 ## Usage as a Module
 
 Reference this repository as a Terraform module in your own configurations:
@@ -176,8 +174,6 @@ module "iam_rbac_groups" {
   }
 }
 ```
-
----
 
 ## Variables
 
