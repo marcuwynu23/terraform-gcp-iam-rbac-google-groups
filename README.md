@@ -177,4 +177,12 @@ module "iam_rbac_groups" {
 }
 ```
 
-All [variables](#variables) documented below are available when using this as a module.
+---
+
+## Variables
+
+| Variable | Description | Type | Default |
+|----------|-------------|------|---------|
+| `project_id` | GCP project ID | `string` | (required) |
+| `region` | GCP region | `string` | `"us-central1"` |
+| `team_permissions` | Map of Google Groups to their assigned GCP roles | `map(list(string))` | See defaults in `variables.tf` |
